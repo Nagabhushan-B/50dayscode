@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action" target="_blank">
+        search:
+        <input type="text" >
+        <br>
+        <br>
+        CheckBoxes:
+        <br>
+       <label for="B">Biryani</label>
+       <input type="checkbox" id="B" name="Biryani" value="Biryani" checked>
+       <label for="Momos">Momos</label>
+       <input type="checkbox" id="Momos" name="Momos" value="Momos">
+       <button type="submit">submit</button>
+       <br>
+       Radio Button:<br>
+       <label for="radio">Male</label>
+       <input type="radio" id="radio" name="gender" value="Male"><!--name shoudld be same in radio button-->
+       <label for="radio">Female</label>
+       <input type="radio" id="radio" name="gender" value="Female">
+       <br>
+       Range:<br>
+       <label for="range"></label>
+       <input type="range" id="range" min="0" max="100" name="volume" step="5" value="50"><!--value set the default value-->
+       <br>
+       <label for="Branch">Branch</label>
+       <select name="Branch" id="Branch">
+        <option value="IT">IT</option>
+        <option value="CSE" >CSE</option>
+        <option value="CS-D">CS-D</option>
+       </select>
+       <br>
+       <br>
+        <audio controls autoplay>
+            <source src="[iSongs.info] 01 - Shiva Shiva Shankaraa.mp3">
+        </audio>
+        <br>
+        <br>
+        <section align="center">
+        <a href="https://github.com/Nagabhushan-B?tab=repositories">
+       <video width="200" height="200" controls autoplay muted><!--by adding only width we can enhance the pixels-->
+            <source src="cloud.mp4">
+        </a>
+        </video>
+        </section>
+    </form>
+</body>
+</html>

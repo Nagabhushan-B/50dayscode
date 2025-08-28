@@ -1,0 +1,47 @@
+body{ 
+    background-image: url(venom.jpg);
+    background-size: cover;
+}
+.signin{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+  color: white;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid rgb(65, 64, 64);
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  background-size: auto;
+}
+
+button{
+   background-color: rgb(3, 255, 70);
+   margin-left: 70px;
+   border-radius: 10px;
+}
+a{
+    font-style: oblique;
+    color: rgb(255, 2, 234);
+}
+.signin label{
+    padding: 10px;
+}
+.signin input{
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color:rgba(255,255,255,0.7);
+    border-radius: 5px;
+}
+.signin h2{
+    text-align: center;
+}
+.signin p{
+    margin-left: 10px;
+}
+@media(max-width:320px){
+    width: 80%;
+}

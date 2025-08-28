@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="car"></h2>
+    <p id="ca"></p>
+    <h3 id="h3"></h3>
+    <h3 id="h31"></h3>
+    <h3 id="h32"></h3>
+    <script>
+        let person={
+            name:"mahadev",
+            ages:19,
+            isStu:true,
+        }
+        console.log(person);
+        //to obtain a specific object
+        console.log("value of name:",person.name);
+        //to change the name 
+        person.name="ram";
+        console.log("name is change to mahadev to ram:",person.name);
+        //delete
+        delete person.isStu;
+        console.log("isStu:",person);
+        //obj with nested objects
+        let stu={
+            name:"vinod",
+            marks:{
+                math:98,
+                science:58,
+            }
+        };
+        console.log("marks of vinod in math:",stu.marks.math);
+        //function with obj
+        function fun(student){ 
+            console.log("stu "+student.name+" years old "+student.age)
+            console.log(student.name,student.age)
+        }
+        fun({name:"bhushan",age:19});
+        //object in an array
+        let book=[
+            {title:"Telugu",price:300},
+            {title:"Hindi",price:400}
+        ];
+        console.log(book[1]);//book[1].title we can access the tille of the book("hindi")
+        //task 2
+        let vechile={
+            car:"audi",
+            model:19,
+            year:2025,
+        }
+       document.getElementById("car").innerHTML="Car:"+vechile.car+" Model: "+vechile.model+" Year: "+vechile.year
+    //    document.getElementById("ca").innerHTML="Car:Tesla Model:Xuv Year:2025"
+    //task3
+    let persons=[
+            {name:"Bhushan",id:300,age:20},
+            {name:"Vinod",id:400,age:30}
+        ];
+        let i=0;
+        let names=persons.map(n=>{
+            return n.name
+        });
+        console.log(names);
+    document.getElementById("ca").innerHTML=names;
+    //task3
+    let namesOf=[
+        {firstname:"Alle",lastname:"vinod",},
+        {firstname:"kavali",lastname:"ramu"},
+        {firstname:"Dhubakula",lastname:"aravind"}
+    ];
+    let namesOfPerson=namesOf.map(name=>{
+        return {...name,FullName:`${name.firstname}${name.lastname}`}//...name access the first,last name in the array
+    });
+    console.log(namesOfPerson);
+    //exe 1
+    let items=[
+        {name:"hp",category:"ele",price:500},
+        {name:"gfg",category:"book",price:105},
+        {name:"asus",category:"ele",price:500},
+        {name:"tesla",category:"cars",price:1500}
+    ];
+    let electo=items.filter(names=>{
+        return names.category=="ele" && names.price>100
+    }).map(cp=>{
+        return `${cp.name} (category:${cp.category} , Price:${cp.price})`;
+    });
+    console.log(electo);
+    </script>
+</body>
+</html>

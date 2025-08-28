@@ -1,0 +1,53 @@
+.imgs{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+}
+.imgs figure{
+    flex: calc(30%);
+    margin:0;
+}
+.imgs img{
+    width: 100px;
+    height: 120px;
+    border-radius: 10%;
+}
+h1{
+    
+    width:100%;
+    text-align: center;
+    background-color: aqua;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+footer{
+display: flex;
+color: rgb(0, 0, 0);
+}
+body{
+    background-image: url(flag2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+@keyframes slidein{
+    from{
+        transform: translatey(-40%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+.imgs img{
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
+}
+.imgs img:hover{
+    animation-play-state: running;
+}

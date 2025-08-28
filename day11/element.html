@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Hello</p>
+    <p class="text">one</p>
+    <p class="text">two</p>
+    <p class="text">three</p>
+    <p>Youuu</p>
+    <button onclick="fun()">click</button>
+    <form name="myForm">
+        <input type="text" name="username">
+    </form>
+    <script>
+        const para=document.getElementById("demo");
+        para.style.color="blue";
+        para.style.backgroundColor="black";
+        para.style.textAlign="center";
+        para.style.fontStyle="italic";
+        const items=document.getElementsByClassName("text");
+        for(let i=0;i<items.length;i++){
+            items[i].style.color="red";
+            items[0].style.fontStyle="italic";
+            items[1].style.color="blue";
+        }
+        //const paras=document.getElementsByTagName("p");
+        //paras[4].innerHTML="me";//it changes youuu to me
+        let fun=()=>{
+             const paras=document.getElementsByTagName("p");
+            paras[4].innerHTML="me";//imp
+            paras[4].style.color="green";
+            paras[4].style.fontStyle="italic";
+        }//by clicking button the youuu changed to me
+        //querySelector by this we can access the class(.) as well as id(#)
+        const element=document.querySelector("#demo");
+        element.style.color="red";
+        //querySelectorAll
+        const allPara = document.querySelectorAll(".text");
+        for(let i=0;i<allPara.length;i++){
+            allPara[1].style.backgroundColor="lightgray";//it give background color gray to the two
+        }
+        //for whole body(document.body)
+        document.body.style.backgroundColor="lightpink";
+        //the document.form for form purpose
+        const form = document.forms["myForm"];
+        form.username.value="John madheleddi";//the john madheleddi comes directly in input
+    </script>
+</body>
+</html>

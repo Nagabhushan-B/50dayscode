@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Bank Account</h3>
+    <button id="deposit"> Deposit</button>
+    <button id="withdraw"> withdraw</button>
+    <button id="check balance"> check balance</button>
+    <h5 id="result"></h5>
+    <script>
+        function createAccount(){
+            let balance=0;
+            return{deposite:amount=>balance+=amount,
+                    withdraw:amount=>balance-=amount,
+                    current:()=>balance
+            };
+        }
+        let account=createAccount();//clouser fun variable called outside
+        let a=document.getElementById("deposit").addEventListener
+        ("click",function(){
+            const amount=Number(prompt("Enter Deposit amount:"));
+            account.deposite(amount);
+            document.getElementById("result").innerText=`Deposit $${amount}`;
+        });
+        document.getElementById("withdraw").addEventListener
+        ("click",function(){
+            const amount=Number(prompt("Enter Withdraw amount:"));
+            account.withdraw(amount);
+            document.getElementById("result").innerText=`withdraw amoount $${amount}`;
+        });
+        document.getElementById("check balance").addEventListener
+        ("onclick",function(){
+            const bal=account.current();
+            document.getElementById("result").innerText=`Account balance $${bal}`;
+        });
+        //callback function
+        function greet(name){
+            console.log("Hello,"+name);
+        }
+        function processUser(callback){
+            const name="javaScript";
+            callback(name);
+        }
+        processUser(greet);
+    </script>
+</body>
+</html>

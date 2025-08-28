@@ -1,0 +1,23 @@
+.img img{
+    width: 20%;
+    height: 20%;
+}
+@keyframes slidein{
+    form{
+        transform: translateY(100%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+.img img{
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-play-state: paused;
+}
+.img img:hover{
+    animation-play-state: running;
+}

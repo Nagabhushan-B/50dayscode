@@ -1,0 +1,76 @@
+body{
+    background-image: url(background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.icon{
+    color: red;
+    margin-left: 130px;
+}
+.sign select{
+    box-shadow: black;
+    background-color: black;
+    color: white;
+    padding: 8px 8px 8px 8px;
+    border-radius: 5px;
+}
+.sign button{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border-color: red;
+    margin-right:8px;
+    padding: 8px 8px 8px 8px;
+    border-radius: 8px;
+}
+.sign{
+    float: right;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+.homeText{
+    background-color: rgba(0, 0, 0, 0.1);
+    color:#fff;
+    margin: 150px auto 0;
+    padding: 40px;
+    text-align: center;
+    width: 20%;
+}
+.homeText button{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 8px 8px 8px 8px;
+    border-radius: 5px;
+    border-color: red;
+}
+.homeText input{
+    padding:8px 8px 8px 8px;
+    box-shadow: #000000;
+    background-color: black;
+    color: white;
+    border-color: black;
+    border-radius: 5px;
+}
+.header{
+    display: flex;
+    gap:900px;
+}
+.images{
+    display: flex;
+}
+.images img {
+    border-radius: 10px;
+    transition: trasform 0.3s ease;
+}
+.image{
+    position: relative;
+}
+.num {
+    position: absolute;
+    bottom: 10px;
+    left: 8px;
+    font-size: 60px;
+    font-weight: bold;
+    color: white
+}

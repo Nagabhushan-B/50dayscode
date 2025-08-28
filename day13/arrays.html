@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array creation
+        let arr=["apple",123,true,{name:"js"}];
+        console.log(arr);//prints the array
+        //indexing
+        console.log(arr[3]);
+        //length of an array
+        console.log("index:",arr.length);
+        //changeing existing element
+        arr[3]="js";
+        console.log(arr);
+        //push() which push the element in last of the array
+        arr.push("hero","super");
+        console.log(arr);
+        //pop() which pop last one elements
+        arr.pop();
+        console.log(arr);
+        //unshift adds one or more elements at begining of array
+        arr.unshift(123,321);
+        console.log(arr);
+        //shift delete one elements at begining of array
+        let a=arr.shift();
+        console.log(arr);
+        console.log(a);
+        //indexOf
+        console.log(arr.indexOf("super"));
+        //lastIndexOf
+        let alpha=["A","B","C","A"];
+        console.log(alpha.lastIndexOf("A"));//it print the last index of A
+        //includes prints true if element prasent else false
+        console.log(alpha.includes("A"));//it's print 'true' because 'A' prasent in alpha 
+        //slice
+        // let slic=alpha.slice(0,2);
+        // console.log("slice(0,2)",slic)
+        console.log(alpha.slice(0,2));
+        //splice
+        //removing using splice
+        let ma=[1,2,3,4,5,6,7];
+        console.log("before removing:",ma);
+        console.log("After removing:",ma.splice(1,2));//it removes 1st index too two elements
+        //adding in splice
+        console.log("after adding:",ma.splice(1,0,"A","B"));
+        //array destructuring
+        const fruits=["apple","banana","cherry"];
+        const[aa,b,c]=fruits;
+        console.log(aa);//o/p:apple
+        console.log(b);//o/p:banana
+        //Higher-order array method
+        //map()
+        let numbers=[1,2,3,4];
+        let Add=numbers.map(num=>num+2);
+        console.log(Add);//3,4,5,6
+        console.log(numbers);//1,2,3,4
+        //filter
+        let Num=[1,2,3,4];
+        let evennum=Num.filter(num=>num%2===0);
+        console.log("even Num:",evennum);//2,4
+        //reduce
+        const sum=Num.reduce((acc,num)=>acc+num,0);//acc stands for accumulator acc=0,1=0+1=1 ten acc=1,acc=1,2=1+2=3
+        console.log(sum);//10
+        //task to grt i/p as arrOfArray[[1,2],[2,3],[4,5]] o/p:[1,2,3,4,5,6]
+        const arrOfArray=[[1,2],[3,4],[5,6]];
+        // const com=[...arrOfArray[0],...arrOfArray[1],...arrOfArray[2]];
+        // console.log(com);
+        const red=arrOfArray.reduce((acc,num)=>{ //if we not mention anything the accumulator take empty array("[]"")
+            // return [...acc,...num]; using spread
+            return acc.concat(num);
+        });
+        console.log(arrOfArray);
+        console.log("After reducd:",red);
+    </script>
+</body>
+</html>
